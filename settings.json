@@ -1,0 +1,6 @@
+{
+  "python.pythonPath": "path-to-your-virtual-environment-python-executable",
+  "python.linting.enabled": true,
+  "python.formatting.provider": "autopep8",
+  "editor.tabSize": 4
+}
