@@ -1,8 +1,6 @@
 # all_cards.py
-from basic_land_card import (
-    forest,
-    mountain
-)
+
+from basic_land_card import forest, mountain
 from creature_card import (
     atarka_world_render,
     archwing_dragon,
@@ -24,14 +22,42 @@ from instant_card import (
     infuriate,
     lightning_bolt,
     seething_song,
-    street_spasm
+    street_spasm,
 )
 from enchantment_card import (
     curse_of_bloodletting,
     crucible_of_fire,
     dragon_mantle,
 )
-from scorcery_card import (
+from scorcery_card import anger_of_the_gods, escape_the_wild, rangers_path
+
+# Combine all cards into a single list
+all_cards = [
+    forest,
+    mountain,
+    atarka_world_render,
+    archwing_dragon,
+    balefire_dragon,
+    dragon_whelp,
+    elvish_mystic,
+    karametras_acolyte,
+    llanowar_elves,
+    ryusei_the_falling_star,
+    slumbering_dragon,
+    stormbreath_dragon,
+    storm_herald,
+    thunderbreak_regent,
+    tyrant_of_kher_ridges,
+    utvara_hellkite,
+    defend_the_hearth,
+    infuriate,
+    lightning_bolt,
+    seething_song,
+    street_spasm,
+    curse_of_bloodletting,
+    crucible_of_fire,
+    dragon_mantle,
     anger_of_the_gods,
     escape_the_wild,
-    rangers_path)
+    rangers_path,
+]
