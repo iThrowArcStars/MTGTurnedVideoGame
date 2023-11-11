@@ -26,8 +26,9 @@ def draw_seven_cards(deck):
     return hand
 
 loops = 10000
+
 if __name__ == "__main__":
-    total_draw_counts = {card.name: 0 for card in dragon_deck}
+    total_draw_counts = {card.name: 0 for card in dragon_deck if hasattr(card, 'name')}
 
     for _ in range(loops):
         drawn_hand = draw_seven_cards(dragon_deck)
@@ -35,5 +36,5 @@ if __name__ == "__main__":
             total_draw_counts[card.name] += 1
 
     for card_name, draw_count in total_draw_counts.items():
-        draw_count_percent = round((draw_count/(loops*7))*100, 2)
-        print(f"{card_name}: {(draw_count_percent)} %")
+        draw_count_percent = round((draw_count / (loops * 7)) * 100, 2)
+        print(f"{card_name}: {draw_count_percent}%")
