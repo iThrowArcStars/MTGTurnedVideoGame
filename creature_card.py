@@ -4,6 +4,7 @@
 DRAGON = "Dragon"
 ELF = "Elf"
 HUMAN = "Human"
+WOLF = "Wolf"
 
 class CreatureCard:
     def __init__(self, creature_type, name, power, toughness, abilities=None, mana_cost=None):
@@ -133,4 +134,12 @@ utvara_hellkite = CreatureCard(
     toughness=6,
     abilities=[ "Flying\nWhenever a Dragon you control attacks, put a 6/6 "
     "red Dragon creature token with flying into the battlefield. "]
+)
+utvara_corgi = CreatureCard(
+    creature_type=WOLF,
+    name="Utvara Corgi",
+    power=2,
+    toughness=2,
+    abilities=[ "Deathtouch, infect\nWhenever another creature attacks, put a 1/1 "
+    "Green wolf creature token with infect into the battlefield. "]
 )
