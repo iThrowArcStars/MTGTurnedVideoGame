@@ -40,8 +40,8 @@ from scorcery_card import anger_of_the_gods, escape_the_wild, rangers_path
 
 # Combine all cards into a single list
 dragon_deck = [
-    *(['forest'] * 6),
-    *(['mountain'] * 6),
+    *([forest] * 6),
+    *([mountain] * 6),
     atarka_world_render,
     archwing_dragon,
     balefire_dragon,
@@ -76,4 +76,4 @@ test_deck = [
     test_creature5,
     test_creature6,
     test_creature7
- ]
+]

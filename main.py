@@ -1,7 +1,7 @@
 # main.py
 import textwrap
 import random
-from decks import test_deck
+from decks import dragon_deck
 
 def print_card_info(card):
     print(f"Name: {card.name}")
@@ -25,10 +25,15 @@ def draw_seven_cards(deck):
         card.draw_count += 1
     return hand
 
-
+loops = 10000
 if __name__ == "__main__":
-    for _ in range(10000):
-        drawn_hand = draw_seven_cards(test_deck)
-    
-    for card in test_deck:
-        print(f"{card.name}: {card.draw_count}")
+    total_draw_counts = {card.name: 0 for card in dragon_deck}
+
+    for _ in range(loops):
+        drawn_hand = draw_seven_cards(dragon_deck)
+        for card in drawn_hand:
+            total_draw_counts[card.name] += 1
+
+    for card_name, draw_count in total_draw_counts.items():
+        draw_count_percent = round((draw_count/(loops*7))*100, 2)
+        print(f"{card_name}: {(draw_count_percent)} %")
