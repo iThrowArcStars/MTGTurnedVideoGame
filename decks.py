@@ -59,3 +59,9 @@ dragon_deck = [
     escape_the_wild,
     rangers_path,
 ]
+
+test_deck = [
+    forest,
+    forest,
+    forest
+ ]
