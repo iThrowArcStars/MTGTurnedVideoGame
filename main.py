@@ -25,7 +25,7 @@ def draw_seven_cards(deck):
         card.draw_count += 1
     return hand
 
-loops = 10000
+loops = 100000
 
 if __name__ == "__main__":
     total_draw_counts = {card.name: 0 for card in dragon_deck if hasattr(card, 'name')}
