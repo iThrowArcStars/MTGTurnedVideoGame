@@ -15,6 +15,14 @@ from creature_card import (
     thunderbreak_regent,
     tyrant_of_kher_ridges,
     utvara_hellkite,
+
+    test_creature1,
+    test_creature2,
+    test_creature3,
+    test_creature4,
+    test_creature5,
+    test_creature6,
+    test_creature7
 )
 from instant_card import (
     defend_the_hearth,
@@ -32,8 +40,8 @@ from scorcery_card import anger_of_the_gods, escape_the_wild, rangers_path
 
 # Combine all cards into a single list
 dragon_deck = [
-    forest,
-    mountain,
+    *(['forest'] * 6),
+    *(['mountain'] * 6),
     atarka_world_render,
     archwing_dragon,
     balefire_dragon,
@@ -61,7 +69,11 @@ dragon_deck = [
 ]
 
 test_deck = [
-    forest,
-    forest,
-    forest
+    test_creature1,
+    test_creature2,
+    test_creature3,
+    test_creature4,
+    test_creature5,
+    test_creature6,
+    test_creature7
  ]

@@ -10,7 +10,7 @@ def print_card_info(card):
     if hasattr(card, "abilities") and card.abilities:
         print("Abilities:")
         for ability in card.abilities:
-            wrapped_text = textwrap.fill(ability, width=80)  # Adjust the line width as needed
+            wrapped_text = textwrap.fill(ability, width=80)
             print(f"  - {wrapped_text}")
 
     if hasattr(card, "mana_cost") and card.mana_cost:
@@ -20,13 +20,15 @@ def print_card_info(card):
 
 def draw_seven_cards(deck):
     shuffled_deck = random.sample(deck, len(deck))
-    hand = shuffled_deck[:2]
+    hand = shuffled_deck[:7]
+    for card in hand:
+        card.draw_count += 1
     return hand
 
-if __name__ == "__main__":
-    # Example: Print information for each drawn card
-    drawn_cards = draw_seven_cards(test_deck)
 
-    print("Drawn Cards:")
-    for card in drawn_cards:
-        print_card_info(card)
+if __name__ == "__main__":
+    for _ in range(10000):
+        drawn_hand = draw_seven_cards(test_deck)
+    
+    for card in test_deck:
+        print(f"{card.name}: {card.draw_count}")

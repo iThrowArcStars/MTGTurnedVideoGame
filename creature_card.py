@@ -143,3 +143,57 @@ utvara_corgi = CreatureCard(
     abilities=[ "Deathtouch, infect\nWhenever another creature attacks, put a 1/1 "
     "Green wolf creature token with infect into the battlefield. "]
 )
+
+
+#test class and creature
+
+class TestCard:
+    def __init__(self, name, power, toughness, draw_count):
+        self.name = name
+        self.power = power
+        self.toughness = toughness
+        self.draw_count = draw_count
+
+
+test_creature1 = TestCard(
+    name="Test Creature",
+    power=999,
+    toughness=999,
+    draw_count = 0
+)
+test_creature2 = TestCard(
+    name="Test Creature",
+    power=999,
+    toughness=999,
+    draw_count = 0
+)
+test_creature3 = TestCard(
+    name="Test Creature",
+    power=999,
+    toughness=999,
+    draw_count = 0
+)
+test_creature4 = TestCard(
+    name="Test Creature",
+    power=999,
+    toughness=999,
+    draw_count = 0
+)
+test_creature5 = TestCard(
+    name="Test Creature",
+    power=999,
+    toughness=999,
+    draw_count = 0
+)
+test_creature6 = TestCard(
+    name="Test Creature",
+    power=999,
+    toughness=999,
+    draw_count = 0
+)
+test_creature7 = TestCard(
+    name="Test Creature",
+    power=999,
+    toughness=999,
+    draw_count = 0
+)
