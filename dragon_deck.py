@@ -1,11 +1,10 @@
-# all_cards.py
+# dragon_deck.py
 
 from basic_land_card import forest, mountain
 from creature_card import (
     atarka_world_render,
     archwing_dragon,
     balefire_dragon,
-    dragon_whelp,
     elvish_mystic,
     karametras_acolyte,
     llanowar_elves,
@@ -32,13 +31,12 @@ from enchantment_card import (
 from scorcery_card import anger_of_the_gods, escape_the_wild, rangers_path
 
 # Combine all cards into a single list
-all_cards = [
+dragon_deck = [
     forest,
     mountain,
     atarka_world_render,
     archwing_dragon,
     balefire_dragon,
-    dragon_whelp,
     elvish_mystic,
     karametras_acolyte,
     llanowar_elves,

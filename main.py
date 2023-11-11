@@ -1,6 +1,7 @@
+# main.py
 import textwrap
 import random
-from all_cards import *
+from dragon_deck import dragon_deck
 
 def print_card_info(card):
     print(f"Name: {card.name}")
@@ -17,14 +18,14 @@ def print_card_info(card):
 
     print()
 
-def draw_seven_cards():
-    shuffled_deck = random.sample(all_cards, len(all_cards))
+def draw_seven_cards(deck):
+    shuffled_deck = random.sample(deck, len(deck))
     hand = shuffled_deck[:7]
     return hand
 
 if __name__ == "__main__":
     # Example: Print information for each drawn card
-    drawn_cards = draw_seven_cards()
+    drawn_cards = draw_seven_cards(dragon_deck)
 
     print("Drawn Cards:")
     for card in drawn_cards:
