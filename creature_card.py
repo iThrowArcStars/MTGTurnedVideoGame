@@ -4,6 +4,7 @@
 DRAGON = "Dragon"
 ELF = "Elf"
 HUMAN = "Human"
+WEREWOLF = "Werewolf"
 WOLF = "Wolf"
 
 class CreatureCard:
@@ -43,6 +44,15 @@ balefire_dragon = CreatureCard(
     toughness=6,
     abilities=["Flying\nWhenever Balefire Dragon daels combat damage to a player"
             ", it deals that much damage to each creature that player controls. "],
+    draw_count=0
+)
+child_of_the_pack = CreatureCard(
+    creature_type=HUMAN,
+    name="Child of the Pack",
+    power=2,
+    toughness=5,
+    abilities=["UncoloredX2, ChaosX1, ForestX1: Create a 2/2 green Wolf creature token. "
+               "\nDaybound (If a player casts no spells during their own turn, it becomes night next turn.)"],
     draw_count=0
 )
 dragon_whelp = CreatureCard(
@@ -88,6 +98,16 @@ ryusei_the_falling_star = CreatureCard(
             " play, it deals 5 damage to each creature without flying. "],
     draw_count=0
 )
+savage_packmate = CreatureCard(
+    creature_type=WEREWOLF,
+    name="Savage Packmate",
+    power=5,
+    toughness=5,
+    abilities=["Trample"
+               "\nOther creatures you control get +1/+0. "
+               "\nNightbound (If a player casts at least two spells during their own turn, it becomes day next turn.) "],
+    draw_count=0
+)
 slumbering_dragon = CreatureCard(
     creature_type=DRAGON,
     name="Slumbering Dragon",
@@ -96,6 +116,14 @@ slumbering_dragon = CreatureCard(
     abilities=["Flying", "Slumbering Dragon can't attack or block unless"
     "it has five or more +1/+1 counters on it. Whenever a creature attacks you"
     "or a planeswalker you control, put a +1/+1 counter on Slumbering Dragon."],
+    draw_count=0
+)
+snarling_wolf = CreatureCard(
+    creature_tpye=WOLF,
+    name="Snarling Wolf",
+    power=1,
+    toughness=1,
+    abilities=["UncoloredX1, ForestX1: Snarling Wolf gets +2/+2 until end of turn. Activate only once each turn. "],
     draw_count=0
 )
 stormbreath_dragon = CreatureCard(

@@ -1,7 +1,7 @@
 # main.py
 import textwrap
 import random
-from decks import dragon_deck
+from decks import wolf_deck
 
 def print_card_info(card):
     print(f"Name: {card.name}")
@@ -28,10 +28,10 @@ def draw_seven_cards(deck):
 loops = 100000
 
 if __name__ == "__main__":
-    total_draw_counts = {card.name: 0 for card in dragon_deck if hasattr(card, 'name')}
+    total_draw_counts = {card.name: 0 for card in wolf_deck if hasattr(card, 'name')}
 
     for _ in range(loops):
-        drawn_hand = draw_seven_cards(dragon_deck)
+        drawn_hand = draw_seven_cards(wolf_deck)
         for card in drawn_hand:
             total_draw_counts[card.name] += 1
 

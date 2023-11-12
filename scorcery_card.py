@@ -23,9 +23,19 @@ escape_the_wild = ScorceryCard(
             "\n \nYou may play an additional land this turn."],
     draw_count=0
 )
+miming_slime = ScorceryCard(
+    name="Miming Slime",
+    abilities=["Put an X/X green Ooze creature token onto the battlefield, where X is the greatest power among creatures you control."],
+    draw_count=0
+)
 rangers_path = ScorceryCard(
     name="Ranger's Path",
     abilities=["Search library for up to two Forest cards and "
             "put them onto \nthe battlefield tapped. Then shuffle your library."],
+    draw_count=0
+)
+retrieve = ScorceryCard(
+    name="Retrieve",
+    abilities=["Return up to one target creature card and up to one target noncreature permanent card from your graveyard to your hand. Exile Retrieve."],
     draw_count=0
 )
