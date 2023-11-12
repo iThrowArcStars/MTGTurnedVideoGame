@@ -119,7 +119,7 @@ slumbering_dragon = CreatureCard(
     draw_count=0
 )
 snarling_wolf = CreatureCard(
-    creature_tpye=WOLF,
+    creature_type=WOLF,
     name="Snarling Wolf",
     power=1,
     toughness=1,

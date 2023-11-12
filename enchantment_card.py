@@ -52,6 +52,6 @@ glorious_sunrise = EnchantmentCard(
 )
 wild_defiance = EnchantmentCard(
     name="Wild Defiance",
-    abilites=["Whenever a creature you control becomes the target of an instant or scorcery spell, that creature gets +3/+3 until end of turn. "],
+    abilities=["Whenever a creature you control becomes the target of an instant or scorcery spell, that creature gets +3/+3 until end of turn. "],
     draw_count=0
 )
