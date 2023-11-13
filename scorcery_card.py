@@ -1,41 +1,36 @@
 #scorcery_card.py
 #Scorcery Card Database:
-class ScorceryCard:
-    def __init__(self, name, draw_count, abilities=None, mana_cost=None):
+class SorceryCard:
+    def __init__(self, name, abilities=None, mana_cost=None, draw_count=0):
         self.name = name
         self.card_type = "Scorcery"
         self.abilities = abilities if abilities else []
         self.mana_cost = mana_cost if mana_cost else []
         self.draw_count = draw_count
 
-#Scorcery Cards:
-anger_of_the_gods = ScorceryCard(
+#Sorcery Cards:
+anger_of_the_gods = SorceryCard(
     name="Anger of the Gods",
     abilities=["Anger of the Gods deals 3 damage to each creature.\n"
             "If a creature dealt damage this way would die this turn,"
             " exile it instead."],
-    draw_count=0
 )
-escape_the_wild = ScorceryCard(
+escape_the_wild = SorceryCard(
     name="Escape the Wild",
     abilities=["Exile the top five cards of your library."
             "\nYou may play cards exiled this way until the end of your next turn."
             "\n \nYou may play an additional land this turn."],
-    draw_count=0
 )
-miming_slime = ScorceryCard(
+miming_slime = SorceryCard(
     name="Miming Slime",
     abilities=["Put an X/X green Ooze creature token onto the battlefield, where X is the greatest power among creatures you control."],
-    draw_count=0
 )
-rangers_path = ScorceryCard(
+rangers_path = SorceryCard(
     name="Ranger's Path",
     abilities=["Search library for up to two Forest cards and "
             "put them onto \nthe battlefield tapped. Then shuffle your library."],
-    draw_count=0
 )
-retrieve = ScorceryCard(
+retrieve = SorceryCard(
     name="Retrieve",
     abilities=["Return up to one target creature card and up to one target noncreature permanent card from your graveyard to your hand. Exile Retrieve."],
-    draw_count=0
 )

@@ -82,23 +82,23 @@ dragon_deck = [
 ]
 
 wolf_deck = [
-    #Lands
-    ([forest] * 21),
-    ([mountain] * 4),
-    #Creatures
-    ([child_of_the_pack] * 1),
-    ([snarling_wolf] * 1),
-    ([savage_packmate] * 0),
-    #Instants
-    ([echoing_courage] * 1),
-    ([massive_might] * 1),
-    ([witchs_web] * 2),
-    #Enchantments
-    ([audacity] * 1),
-    ([blanchwood_armor] * 1),
-    ([glorious_sunrise] * 1),
-    ([wild_defiance] * 1),
-    #Scorcery
-    ([miming_slime] * 2),
-    ([retrieve] * 1)
+    # Lands
+    *([forest] * 21),
+    *([mountain] * 4),
+    # Creatures
+    *([child_of_the_pack] * 1),
+    *([snarling_wolf] * 1),
+    *([savage_packmate] * 0),
+    # Instants
+    *([echoing_courage] * 1),
+    *([massive_might] * 1),
+    *([witchs_web] * 2),
+    # Enchantments
+    *([audacity] * 1),
+    *([blanchwood_armor] * 1),
+    *([glorious_sunrise] * 1),
+    *([wild_defiance] * 1),
+    # Sorcery
+    *([miming_slime] * 2),
+    *([retrieve] * 1)
 ]
