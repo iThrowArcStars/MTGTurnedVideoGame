@@ -2,6 +2,7 @@
 import textwrap
 import random
 from decks import wolf_deck
+from decks import dragon_deck
 
 def print_card_info(card):
     print(f"Name: {card.name}")
@@ -25,13 +26,26 @@ def draw_seven_cards(deck):
         card.draw_count += 1
     return hand
 
+def user_input():
+    while True:
+        try:
+            user_input = str(input("Would you like to see the stats on Dragon Deck ('D'), or Wolf Deck ('W')"))
+        except ValueError:
+            print("Invalid response, try again. ")
+            continue
+        break
+    if user_input == "D":
+        return dragon_deck
+    else: return wolf_deck
+
 loops = 100000
+user_input_var = user_input()
 
 if __name__ == "__main__":
-    total_draw_counts = {card.name: 0 for card in wolf_deck if hasattr(card, 'name')}
+    total_draw_counts = {card.name: 0 for card in user_input_var if hasattr(card, 'name')}
 
     for _ in range(loops):
-        drawn_hand = draw_seven_cards(wolf_deck)
+        drawn_hand = draw_seven_cards(user_input_var)
         for card in drawn_hand:
             total_draw_counts[card.name] += 1
 
