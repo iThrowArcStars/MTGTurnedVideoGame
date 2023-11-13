@@ -174,52 +174,46 @@ utvara_corgi = CreatureCard(
 #test class and creature
 
 class TestCard:
-    def __init__(self, name, power, toughness, draw_count):
+    def __init__(self, name, power, toughness, draw_count=0, mana_cost=None):
         self.name = name
         self.power = power
         self.toughness = toughness
         self.draw_count = draw_count
+        self.mana_cost = mana_cost
 
 
 test_creature1 = TestCard(
-    name="Test Creature",
+    name="Test Creature1",
     power=999,
     toughness=999,
-    draw_count = 0
 )
 test_creature2 = TestCard(
-    name="Test Creature",
+    name="Test Creature2",
     power=999,
     toughness=999,
-    draw_count = 0
 )
 test_creature3 = TestCard(
-    name="Test Creature",
+    name="Test Creature3",
     power=999,
     toughness=999,
-    draw_count = 0
 )
 test_creature4 = TestCard(
-    name="Test Creature",
+    name="Test Creature4",
     power=999,
     toughness=999,
-    draw_count = 0
 )
 test_creature5 = TestCard(
-    name="Test Creature",
+    name="Test Creature5",
     power=999,
     toughness=999,
-    draw_count = 0
 )
 test_creature6 = TestCard(
-    name="Test Creature",
+    name="Test Creature6",
     power=999,
     toughness=999,
-    draw_count = 0
 )
 test_creature7 = TestCard(
-    name="Test Creature",
+    name="Test Creature7",
     power=999,
     toughness=999,
-    draw_count = 0
 )

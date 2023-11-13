@@ -19,6 +19,14 @@ from creature_card import (
     tyrant_of_kher_ridges,
     utvara_hellkite,
 
+    #Test Cards
+    test_creature1,
+    test_creature2,
+    test_creature3,
+    test_creature4,
+    test_creature5,
+    test_creature6,
+    test_creature7
 )
 from instant_card import (
     defend_the_hearth,
@@ -101,4 +109,13 @@ wolf_deck = [
     # Sorcery
     *([miming_slime] * 2),
     *([retrieve] * 1)
+]
+test_deck = [
+    test_creature1,
+    test_creature2,
+    test_creature3,
+    test_creature4,
+    test_creature5,
+    test_creature6,
+    test_creature7
 ]
