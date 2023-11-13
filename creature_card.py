@@ -1,4 +1,5 @@
 #creature_card.py
+from card import Card
 #The Creature Database:
 #Creature Types:
 DRAGON = "Dragon"
@@ -173,47 +174,58 @@ utvara_corgi = CreatureCard(
 
 #test class and creature
 
-class TestCard:
-    def __init__(self, name, power, toughness, draw_count=0, mana_cost=None):
-        self.name = name
+class TestCard(Card):
+    def __init__(self, creature_type, name, power, toughness, abilities=None, mana_cost=None):
+        super().__init__(name, mana_cost)
+        self.card_type = "Creature"
+        self.creature_type = creature_type
+        self.abilities = abilities if abilities else []
         self.power = power
         self.toughness = toughness
-        self.draw_count = draw_count
-        self.mana_cost = mana_cost
 
 
 test_creature1 = TestCard(
     name="Test Creature1",
+    creature_type=DRAGON,
     power=999,
     toughness=999,
+    mana_cost={"R": 1}
 )
 test_creature2 = TestCard(
     name="Test Creature2",
+    creature_type=DRAGON,
     power=999,
     toughness=999,
+    mana_cost={"R": 1, "B": 1}
 )
 test_creature3 = TestCard(
     name="Test Creature3",
+    creature_type=DRAGON,
     power=999,
     toughness=999,
+    mana_cost={"W": 1}
 )
 test_creature4 = TestCard(
     name="Test Creature4",
+    creature_type=DRAGON,
     power=999,
     toughness=999,
 )
 test_creature5 = TestCard(
     name="Test Creature5",
+    creature_type=DRAGON,
     power=999,
     toughness=999,
 )
 test_creature6 = TestCard(
     name="Test Creature6",
+    creature_type=DRAGON,
     power=999,
     toughness=999,
 )
 test_creature7 = TestCard(
     name="Test Creature7",
+    creature_type=DRAGON,
     power=999,
     toughness=999,
 )

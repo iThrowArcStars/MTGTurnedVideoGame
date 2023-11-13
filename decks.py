@@ -1,4 +1,4 @@
-# dragon_deck.py
+# decks.py
 
 from basic_land_card import forest, mountain
 from creature_card import (
@@ -111,7 +111,7 @@ wolf_deck = [
     *([retrieve] * 1)
 ]
 test_deck = [
-    test_creature1,
+    *([test_creature1] * 1),
     test_creature2,
     test_creature3,
     test_creature4,

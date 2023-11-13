@@ -31,4 +31,13 @@ island = BasicLandCard(
 
 class ManaPool:
     def __init__(self):
-        pass
+        self.mana = {"R": 0, "G": 0, "B": 0, "U": 0, "W": 0, "C": 0}
+
+    def add_mana(self, color, amount):
+        self.mana[color] += amount
+
+    def spend_mana(self, color, amount):
+        if self.mana[color] >= amount:
+            self.mana[color] -= amount
+            return True
+        return False
