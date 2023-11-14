@@ -175,13 +175,14 @@ utvara_corgi = CreatureCard(
 #test class and creature
 
 class TestCard(Card):
-    def __init__(self, creature_type, name, power, toughness, abilities=None, mana_cost=None):
+    def __init__(self, creature_type, name, power, toughness, draw_count = 0, abilities=None, mana_cost=None):
         super().__init__(name, mana_cost)
         self.card_type = "Creature"
         self.creature_type = creature_type
         self.abilities = abilities if abilities else []
         self.power = power
         self.toughness = toughness
+        self.draw_count = draw_count
 
 
 test_creature1 = TestCard(

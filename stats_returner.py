@@ -1,7 +1,6 @@
 #stats_returner.py
 import random
-from decks import wolf_deck
-from decks import dragon_deck
+from decks import wolf_deck, dragon_deck, test_deck
 
 def draw_seven_cards(deck):
     shuffled_deck = random.sample(deck, len(deck))
@@ -20,7 +19,8 @@ def user_input():
         break
     if user_input == "D":
         return dragon_deck
-    else: return wolf_deck
+    elif user_input == "W": return wolf_deck
+    else: return test_deck
 
 loops = 100000
 user_input_var = user_input()
