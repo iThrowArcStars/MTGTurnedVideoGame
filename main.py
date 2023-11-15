@@ -8,9 +8,33 @@ from decks import (
     test_creature4,
     test_creature5,
     test_creature6,
-    test_creature7
+    test_creature7,
+    test_deck
 )
 from basic_land_card import ManaPool
+
+class Battlefield:
+    def __init__(self):
+        self.cards_on_battlefield = {}
+
+    def add_card(self, card_instance):
+        if card_instance in self.cards_on_battlefield:
+            self.cards_on_battlefield[card_instance] += 1
+        else:
+            self.cards_on_battlefield[card_instance] = 1
+
+    def remove_card(self, card_instance):
+        if card_instance in self.cards_on_battlefield:
+            if self.cards_on_battlefield[card_instance] > 1:
+                self.cards_on_battlefield[card_instance] -= 1
+            else:
+                del self.cards_on_battlefield[card_instance]
+        else:
+            print("Card not found on the battlefield.")
+
+    def cast_card(self, card_instance):
+        self.add_card(card_instance)
+        print(f"{card_instance} has been cast and added to the battlefield.")
 
 def cast_card(player_mana_pool, card):
     if hasattr(card, 'mana_cost') and isinstance(card.mana_cost, list):
@@ -31,10 +55,10 @@ def cast_card(player_mana_pool, card):
         return False
 
     print(f"{card.name} cast successfully.")
-    card.on_battlefield = True
     return True
 
 
-player1_mana_pool = ManaPool()
-player1_mana_pool.add_mana("R", 1)
-cast_card(player1_mana_pool, test_creature1)
+battlefield = Battlefield()
+battlefield.cast_card(test_creature1)
+
+print(battlefield.cards_on_battlefield)

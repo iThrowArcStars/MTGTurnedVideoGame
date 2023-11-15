@@ -187,7 +187,6 @@ test_creature1 = TestCard(
     power=999,
     toughness=999,
     mana_cost={"R": 1},
-    on_battlefield=False
 )
 test_creature2 = TestCard(
     name="Test Creature2",
@@ -195,7 +194,6 @@ test_creature2 = TestCard(
     power=999,
     toughness=999,
     mana_cost={"R": 1, "B": 1},
-    on_battlefield=False
 )
 test_creature3 = TestCard(
     name="Test Creature3",
@@ -203,7 +201,6 @@ test_creature3 = TestCard(
     power=999,
     toughness=999,
     mana_cost={"W": 1},
-    on_battlefield=False
 )
 test_creature4 = TestCard(
     name="Test Creature4",
@@ -211,7 +208,6 @@ test_creature4 = TestCard(
     power=999,
     toughness=999,
     mana_cost={"R": 3},
-    on_battlefield=False
 )
 test_creature5 = TestCard(
     name="Test Creature5",
@@ -219,7 +215,6 @@ test_creature5 = TestCard(
     power=999,
     toughness=999,
     mana_cost={"W": 1},
-    on_battlefield=False
 )
 test_creature6 = TestCard(
     name="Test Creature6",
@@ -227,7 +222,6 @@ test_creature6 = TestCard(
     power=999,
     toughness=999,
     mana_cost={"B": 1},
-    on_battlefield=False
 )
 test_creature7 = TestCard(
     name="Test Creature7",
@@ -235,5 +229,4 @@ test_creature7 = TestCard(
     power=999,
     toughness=999,
     mana_cost={"R": 2},
-    on_battlefield=False
 )
