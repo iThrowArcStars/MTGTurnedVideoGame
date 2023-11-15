@@ -12,7 +12,7 @@ class CreatureCard:
     def __init__(self, creature_type, name, power, toughness, abilities=None, mana_cost=None, draw_count=0):
         self.name = name
         self.card_type = "Creature"
-        self.creature_type = creature_type  # Use the provided creature_type parameter
+        self.creature_type = creature_type
         self.abilities = abilities if abilities else []
         self.mana_cost = mana_cost if mana_cost else []
         self.power = power
@@ -170,7 +170,7 @@ utvara_corgi = CreatureCard(
 #test class and creature
 
 class TestCard(Card):
-    def __init__(self, creature_type, name, power, toughness, draw_count = 0, abilities=None, mana_cost=None):
+    def __init__(self, creature_type, name, power, toughness, draw_count = 0, abilities=None, mana_cost=None, on_battlefield=False):
         super().__init__(name, mana_cost)
         self.card_type = "Creature"
         self.creature_type = creature_type
@@ -178,6 +178,7 @@ class TestCard(Card):
         self.power = power
         self.toughness = toughness
         self.draw_count = draw_count
+        self.on_battlefield = on_battlefield
 
 
 test_creature1 = TestCard(
@@ -185,43 +186,54 @@ test_creature1 = TestCard(
     creature_type=DRAGON,
     power=999,
     toughness=999,
-    mana_cost={"R": 1}
+    mana_cost={"R": 1},
+    on_battlefield=False
 )
 test_creature2 = TestCard(
     name="Test Creature2",
     creature_type=DRAGON,
     power=999,
     toughness=999,
-    mana_cost={"R": 1, "B": 1}
+    mana_cost={"R": 1, "B": 1},
+    on_battlefield=False
 )
 test_creature3 = TestCard(
     name="Test Creature3",
     creature_type=DRAGON,
     power=999,
     toughness=999,
-    mana_cost={"W": 1}
+    mana_cost={"W": 1},
+    on_battlefield=False
 )
 test_creature4 = TestCard(
     name="Test Creature4",
     creature_type=DRAGON,
     power=999,
     toughness=999,
+    mana_cost={"R": 3},
+    on_battlefield=False
 )
 test_creature5 = TestCard(
     name="Test Creature5",
     creature_type=DRAGON,
     power=999,
     toughness=999,
+    mana_cost={"W": 1},
+    on_battlefield=False
 )
 test_creature6 = TestCard(
     name="Test Creature6",
     creature_type=DRAGON,
     power=999,
     toughness=999,
+    mana_cost={"B": 1},
+    on_battlefield=False
 )
 test_creature7 = TestCard(
     name="Test Creature7",
     creature_type=DRAGON,
     power=999,
     toughness=999,
+    mana_cost={"R": 2},
+    on_battlefield=False
 )

@@ -31,6 +31,7 @@ def cast_card(player_mana_pool, card):
         return False
 
     print(f"{card.name} cast successfully.")
+    card.on_battlefield = True
     return True
 
 
