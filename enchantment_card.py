@@ -23,8 +23,7 @@ blanchwood_armor = EnchantmentCard(
 curse_of_bloodletting = EnchantmentCard(
     name="Curse of Bloodletting",
     abilities=["Enchant player"
-            "\nIf a sorce would deal damage to enchanted player, it deals double"
-            " that damage to that player instead. "],
+            "\nIf a sorce would deal damage to enchanted player, it deals double that damage to that player instead. "],
 )
 crucible_of_fire = EnchantmentCard(
     name="Crucible of Fire",
@@ -32,9 +31,9 @@ crucible_of_fire = EnchantmentCard(
 )
 dragon_mantle = EnchantmentCard(
     name="Dragon Mantle",
-    abilities=["Enchant creature\nWhen Dragon Mantle"
-            " enters the battlefield, draw a card.\nEnchanted creature has 'Chaos"
-            "X1: This creature gets +1/+0 until end of turn.'"],
+    abilities=["Enchant creature"
+               "\nWhen Dragon Mantle enters the battlefield, draw a card."
+               "\nEnchanted creature has 'ChaosX1: This creature gets +1/+0 until end of turn.'"],
 )
 glorious_sunrise = EnchantmentCard(
     name="Glorious Sunrise",
