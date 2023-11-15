@@ -11,15 +11,14 @@ class SorceryCard:
 #Sorcery Cards:
 anger_of_the_gods = SorceryCard(
     name="Anger of the Gods",
-    abilities=["Anger of the Gods deals 3 damage to each creature.\n"
-            "If a creature dealt damage this way would die this turn,"
-            " exile it instead."],
+    abilities=["Anger of the Gods deals 3 damage to each creature. If a creature dealt damage this way would die this turn, exile it instead."],
 )
 escape_the_wild = SorceryCard(
     name="Escape the Wild",
     abilities=["Exile the top five cards of your library."
             "\nYou may play cards exiled this way until the end of your next turn."
-            "\n \nYou may play an additional land this turn."],
+            "\n"
+            "\nYou may play an additional land this turn."],
 )
 miming_slime = SorceryCard(
     name="Miming Slime",
@@ -27,8 +26,7 @@ miming_slime = SorceryCard(
 )
 rangers_path = SorceryCard(
     name="Ranger's Path",
-    abilities=["Search library for up to two Forest cards and "
-            "put them onto \nthe battlefield tapped. Then shuffle your library."],
+    abilities=["Search library for up to two Forest cards and put them onto the battlefield tapped. Then shuffle your library."],
 )
 retrieve = SorceryCard(
     name="Retrieve",
