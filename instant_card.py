@@ -35,10 +35,9 @@ seething_song = InstantCard(
 )
 street_spasm = InstantCard(
     name="Street Spasm",
-    abilities=["Street Spasm deals X damage to target creature without flying"
-            "you don't control \n \n Overload: XX 2Chaos \n("
-            "You may cast this spell for it's Overload cost. \nIf you do, change"
-            " its text by replacing all instances of 'target' with 'each.') "],
+    abilities=["Street Spasm deals X damage to target creature without flying you don't control"
+               "\nOverload: XX 2Chaos "
+               "\n(You may cast this spell for it's Overload cost. If you do, change its text by replacing all instances of 'target' with 'each.') "],
 )
 witchs_web = InstantCard(
     name="Witch's Web",
