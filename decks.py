@@ -119,8 +119,3 @@ test_deck = [
     test_creature6,
     test_creature7
 ]
-test_deck_dict = {
-    "test_creature1_dict": test_deck[0],
-    "test_creature2_dict": test_deck[1],
-    "test_creature3_dict": test_deck[2]
-}
