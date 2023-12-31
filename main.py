@@ -1,3 +1,7 @@
 # main.py
-# This file is NOT the main entry point of the program, it is mostly used as a test file for logic.
-# For functioning programs go to: stats_returner.py, 
+from card import Card
+from instant import Instant
+from instant import test_instant_card_1, test_instant_card_2
+
+print(test_instant_card_2.card_name)
+print(test_instant_card_2.mana_cost)
