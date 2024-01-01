@@ -14,7 +14,3 @@ class ManaPool:
     
     def get_total_mana(self):
         return sum(self.mana.values())
-
-mana_pool = ManaPool()
-mana_pool.add_mana("Colorless", 5)
-print(mana_pool.mana)
