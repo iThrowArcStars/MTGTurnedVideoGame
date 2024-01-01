@@ -1,8 +1,6 @@
 #hand.py 
 #This file initializes a class desribing a player's hand
 
-# hand.py
-# hand.py
 import random
 
 class PlayerHand:
