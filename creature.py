@@ -17,6 +17,6 @@ class Creature:
     def add_ability(self, ability):
         self.abilities.append(ability)
 
-    def perform_abilities(self, game_state, deck, draw_count):
+    def perform_abilities(self, game_state, deck, player_hand, draw_count):
         for ability in self.abilities:
-            ability.execute(game_state, deck, draw_count)
+            ability.execute(game_state, deck, player_hand, draw_count)

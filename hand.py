@@ -9,10 +9,12 @@ class PlayerHand:
 
     def add(self, deck, draw_count):
         if deck:
-            for element in range(draw_count):
+            for _ in range(draw_count):
+                if deck == []:
+                    break
                 new_card = random.choice(deck)
                 self.player_hand.append(new_card)
-            print(self.player_hand)
+                deck.remove(new_card)
         else:
             print("The deck is empty. Cannot add a card to the hand.")
             return None  # Return None if the deck is empty
