@@ -1,14 +1,10 @@
 #abilities.py
 #This file defines the abilities on some cards
 
-from hand import PlayerHand
-
 class Ability:
-    def execute(self):
+    def execute(self, game_state):
         pass
 
 class DrawCard(Ability):
-    def execute(self, player_hand, deck):
-        print(f"Player draws a card.")
-        player_hand.add(deck)
-
+    def execute(self, game_state, deck, draw_count):
+        print(f"{game_state['player']} draws {draw_count} card from the library.")

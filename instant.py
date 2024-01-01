@@ -8,5 +8,5 @@ class Instant(Card):
         self.mana_cost = mana_cost
 
 #All instants:
-test_instant_card_1 = Instant("Test Card 1", abilities=["Has a test ability."], mana_cost={"R": 5, "B": 3})
-test_instant_card_2 = Instant("Test Card 2", abilities=["Another test ability."], mana_cost={"G": 2, "U": 1})
+test_instant_card_1 = Instant("Test Card 1", abilities={"Draw": 3}, mana_cost={"R": 5, "B": 3})
+test_instant_card_2 = Instant("Test Card 2", abilities={"Draw": 1}, mana_cost={"G": 2, "U": 1})
