@@ -8,8 +8,15 @@ from creature import Creature
 
 draw_card_ability = DrawCard()
 
-test_creature = Creature(
-    name="Test Creature",
+test_creature01 = Creature(
+    name="Test Creature01",
+    power=5,
+    toughness=4,
+    mana_cost={"Red": 2, "Colorless": 3},
+    abilities=[draw_card_ability]
+)
+test_creature02 = Creature(
+    name="Test Creature02",
     power=5,
     toughness=4,
     mana_cost={"Red": 2, "Colorless": 3},
@@ -17,7 +24,7 @@ test_creature = Creature(
 )
 
 # Simulate performing abilities during the game
-deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+deck = [test_creature01, test_creature02]
 game_state = {'player': 'Player 1'}
 battlefield = Battlefield()
 p1_mana_pool = ManaPool()
@@ -31,4 +38,4 @@ p1_mana_pool.add_mana("Colorless", 3)
 print(p1_mana_pool.mana)
 battlefield.add(test_creature, p1_mana_pool)
 draw_count = 7
-test_creature.perform_abilities(game_state, deck, p1_hand, draw_count)
+test_creature01.perform_abilities(game_state, deck, p1_hand, draw_count)
