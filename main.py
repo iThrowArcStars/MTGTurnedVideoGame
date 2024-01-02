@@ -1,6 +1,7 @@
 # main.py
 from mana import ManaPool
 from battlefield import Battlefield
+from life import Life
 from hand import PlayerHand
 from abilities import Ability, DrawCard
 
@@ -29,9 +30,11 @@ game_state = {'player': 'Player 1'}
 battlefield = Battlefield()
 p1_mana_pool = ManaPool()
 p1_hand = PlayerHand()
+p1_life = Life()
+
+p1_life.add(game_state, 4)
 
 p1_hand.add(deck, 7)
-print(p1_hand.player_hand)
 
 p1_mana_pool.add_mana("Red", 4)
 p1_mana_pool.add_mana("Colorless", 3)
