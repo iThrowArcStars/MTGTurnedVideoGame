@@ -23,11 +23,19 @@ class Creature(Card):
             ability.execute(game_state, *args, **kwargs)
 
 class Enchantment(Card):
-    def __init__(self, name, mana_cost, abilities=None):
+    def __init__(self, name, mana_cost=None, abilities=None):
         super().__init__(name, mana_cost, abilities)
     
     def add_ability(self, ability):
         self.abilities.append(ability)
+    
+    def perform_abilities(self, game_state, *args, **kwargs):
+        for ability in self.abilities:
+            ability.execute(game_state, *args, **kwargs)
+
+class Instant(Card):
+    def __init__(self, name, mana_cost=None, abilities=None):
+        super().__init__(name, mana_cost, abilities)
     
     def perform_abilities(self, game_state, *args, **kwargs):
         for ability in self.abilities:

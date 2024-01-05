@@ -3,8 +3,7 @@ from mana import ManaPool
 from hand import PlayerHand
 from abilities import DrawCardAbility, AddManaAbility
 
-from card import Creature
-from card import Enchantment
+from card import Creature, Enchantment, Instant
 
 draw_card_ability = DrawCardAbility()
 add_mana_ability = AddManaAbility()
@@ -24,6 +23,12 @@ test_enchantment = Enchantment(
     abilities=[draw_card_ability]
 )
 
+test_instant = Instant(
+    name="Test Instant",
+    mana_cost={"Red": 1},
+    abilities=[]
+)
+
 # Simulate performing abilities during the game
 
 # Sets basic data required to play game 
@@ -36,3 +41,4 @@ color = "Red"
 amount = 1
 test_creature.perform_abilities(game_state, player_mana_pool=player_mana_pool, player_hand=player_hand, draw_count=draw_count, amount=amount, color=color)
 test_enchantment.perform_abilities(game_state, player_hand=player_hand, draw_count=draw_count)
+test_instant.perform_abilities(game_state)
