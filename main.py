@@ -3,11 +3,12 @@ from mana import ManaPool
 from battlefield import Battlefield
 from life import Life
 from hand import PlayerHand
-from abilities import Ability, DrawCard
+from abilities import Ability, DrawCard, AddMana
 
 from creature import Creature
 
 draw_card_ability = DrawCard()
+add_mana_ability = AddMana()
 
 test_creature01 = Creature(
     name="Test Creature01",
@@ -21,7 +22,7 @@ test_creature02 = Creature(
     power=5,
     toughness=4,
     mana_cost={"Red": 2, "Colorless": 3},
-    abilities=[draw_card_ability]
+    abilities=[add_mana_ability]
 )
 
 # Simulate performing abilities during the game
@@ -32,13 +33,13 @@ p1_mana_pool = ManaPool()
 p1_hand = PlayerHand()
 p1_life = Life()
 
-p1_life.add(game_state, 4)
+p1_life.gain_life(game_state, 4)
 
 p1_hand.add(deck, 7)
 
 p1_mana_pool.add_mana("Red", 4)
 p1_mana_pool.add_mana("Colorless", 3)
 print(p1_mana_pool.mana)
-battlefield.add(test_creature01, p1_mana_pool)
-draw_count = 7
-test_creature01.perform_abilities(game_state, deck, p1_hand, draw_count)
+battlefield.add(game_state, test_creature01, p1_mana_pool)
+amount = 7
+test_creature02.perform_abilities(game_state, p1_mana_pool, "Red", amount)

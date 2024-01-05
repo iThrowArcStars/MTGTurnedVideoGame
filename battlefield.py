@@ -6,7 +6,7 @@ class Battlefield:
     def __init__(self, card_list=None):
         self.card_list = card_list if card_list is not None else []
 
-    def add(self, card_instance, player_mana_pool):
+    def add(self, game_state, card_instance, player_mana_pool):
         insufficient_mana_colors = []
         for color, cost in card_instance.mana_cost.items():
             if player_mana_pool.mana.get(color, 0) < cost:
@@ -21,4 +21,4 @@ class Battlefield:
 
         self.card_list.append(card_instance)
         print(f"{card_instance.name} successfully added to the battlefield.")
-        print(player_mana_pool.mana)
+        print(f"{game_state['player']} has {player_mana_pool.mana}")

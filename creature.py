@@ -2,7 +2,7 @@
 #This file defines all Cards that are considered the subclass Creature
 from card import Card
 
-class Creature:
+class Creature(Card):
     def __init__(self, name, power, toughness, abilities=None, mana_cost=None):
         self.name = name
         self.power = power
@@ -11,7 +11,6 @@ class Creature:
         self.mana_cost = mana_cost if mana_cost is not None else {}
 
     def default_abilities(self):
-        # Define default abilities for creatures here
         return []
 
     def add_ability(self, ability):

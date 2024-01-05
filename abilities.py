@@ -10,7 +10,13 @@ class Ability:
         pass
 
 class DrawCard(Ability):
-    def execute(self, game_state, deck, player_hand, draw_count):
-        print(f"{game_state['player']} draws {draw_count} card from the library.")
-        player_hand.add(deck, draw_count)
+    def execute(self, game_state: dict, deck: list, player_hand: list, amount: int):
+        print(f"{game_state['player']} draws {amount} card from the library.")
+        player_hand.add(deck, amount)
         print(player_hand.player_hand)
+
+class AddMana(Ability):
+    def execute(self, game_state: dict, player_mana_pool: dict, color: str, amount: int):
+        print(f"{game_state['player']} gains {amount} {color} mana.")
+        player_mana_pool.add_mana(color, amount)
+        print(player_mana_pool.mana)
