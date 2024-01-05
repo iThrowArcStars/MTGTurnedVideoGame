@@ -21,11 +21,21 @@ class AddManaAbility(Ability):
         
         if 'color' in kwargs:
             color = kwargs.get('color')
-        if 'amount' in kwargs:
-            amount = kwargs.get('amount')
+        if 'mana_amount' in kwargs:
+            mana_amount = kwargs.get('mana_amount')
         
-        #Logic for the ability 
-        print(f"{game_state['player']} gains {amount} {color} mana.")
-        player_mana_pool.add_mana(color, amount)
+        #Logic for the ability
+        print(f"{game_state['player']} gains {mana_amount} {color} mana.")
+        player_mana_pool.add_mana(color, mana_amount)
         print(player_mana_pool.mana)
 
+class AddLifeAbility(Ability):
+    def execute(self, game_state, *args, **kwargs):
+        
+        if 'life_amount' in kwargs:
+            life_amount = kwargs.get('life_amount')
+        if 'player_life' in kwargs:
+            player_life = kwargs.get('player_life')
+        
+        #Logic for the ability
+        player_life.gain_life(game_state, life_amount)
