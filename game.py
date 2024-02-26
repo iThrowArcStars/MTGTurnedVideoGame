@@ -1,4 +1,5 @@
 # game.py
+# This file is the location of the actual game logic
 
 from mana import ManaPool
 from hand import PlayerHand
